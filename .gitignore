@@ -1,2 +1,4 @@
 node_modules
 .next
+build-error.txt
+build-errors.txt
