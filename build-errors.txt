@@ -1,0 +1,273 @@
+
+> kapil-portfolio@1.0.0 build
+> next build
+
+  ▲ Next.js 14.2.15
+
+   Creating an optimized production build ...
+Failed to compile.
+
+./components/Cursor.jsx
+Error: 
+  [31mx[0m Merge conflict marker encountered.
+   ,-[[36;1;4mC:\Users\Asus\Downloads\kapil-portfolio_2\kapil-portfolio\components\Cursor.jsx[0m:2:1]
+ [2m2[0m | import { useEffect, useState } from "react";
+ [2m3[0m | import { motion, useMotionValue, useSpring } from "framer-motion";
+ [2m4[0m | 
+ [2m5[0m | <<<<<<< HEAD
+   : [31;1m^^^^^^^[0m
+ [2m6[0m | // Dot follows the pointer instantly; the ring trails it with spring physics
+ [2m7[0m | // and grows when hovering links, buttons or cards.
+ [2m7[0m | =======
+   `----
+
+  [31mx[0m Merge conflict marker encountered.
+    ,-[[36;1;4mC:\Users\Asus\Downloads\kapil-portfolio_2\kapil-portfolio\components\Cursor.jsx[0m:5:1]
+ [2m 5[0m | <<<<<<< HEAD
+ [2m 6[0m | // Dot follows the pointer instantly; the ring trails it with spring physics
+ [2m 7[0m | // and grows when hovering links, buttons or cards.
+ [2m 8[0m | =======
+    : [31;1m^^^^^^^[0m
+ [2m 9[0m | // Desktop: dot follows the mouse, ring trails it with spring physics.
+ [2m10[0m | // Touch screens: the dot and ring appear under your finger while you press,
+ [2m10[0m | // and every tap sends out a gold ripple.
+    `----
+
+  [31mx[0m Merge conflict marker encountered.
+    ,-[[36;1;4mC:\Users\Asus\Downloads\kapil-portfolio_2\kapil-portfolio\components\Cursor.jsx[0m:9:1]
+ [2m 9[0m | // Desktop: dot follows the mouse, ring trails it with spring physics.
+ [2m10[0m | // Touch screens: the dot and ring appear under your finger while you press,
+ [2m11[0m | // and every tap sends out a gold ripple.
+ [2m12[0m | >>>>>>> master
+    : [31;1m^^^^^^^[0m
+ [2m13[0m | export default function Cursor() {
+ [2m14[0m |   const x = useMotionValue(-100), y = useMotionValue(-100);
+ [2m14[0m |   const rx = useSpring(x, { stiffness: 140, damping: 16, mass: 0.6 });
+    `----
+
+  [31mx[0m Merge conflict marker encountered.
+    ,-[[36;1;4mC:\Users\Asus\Downloads\kapil-portfolio_2\kapil-portfolio\components\Cursor.jsx[0m:14:1]
+ [2m14[0m |   const x = useMotionValue(-100), y = useMotionValue(-100);
+ [2m15[0m |   const rx = useSpring(x, { stiffness: 140, damping: 16, mass: 0.6 });
+ [2m16[0m |   const ry = useSpring(y, { stiffness: 140, damping: 16, mass: 0.6 });
+ [2m17[0m | <<<<<<< HEAD
+    : [31;1m^^^^^^^[0m
+ [2m18[0m |   const [on, setOn] = useState(false);
+ [2m19[0m |   const [hover, setHover] = useState(false);
+ [2m19[0m |   const [down, setDown] = useState(false);
+    `----
+
+  [31mx[0m Merge conflict marker encountered.
+    ,-[[36;1;4mC:\Users\Asus\Downloads\kapil-portfolio_2\kapil-portfolio\components\Cursor.jsx[0m:22:1]
+ [2m22[0m |   useEffect(() => {
+ [2m23[0m |     if (!window.matchMedia("(hover:hover) and (pointer:fine)").matches) return;
+ [2m24[0m |     setOn(true);
+ [2m25[0m | =======
+    : [31;1m^^^^^^^[0m
+ [2m26[0m |   const [touch, setTouch] = useState(null);
+ [2m27[0m |   const [hover, setHover] = useState(false);
+ [2m27[0m |   const [down, setDown] = useState(false);
+    `----
+
+  [31mx[0m Merge conflict marker encountered.
+    ,-[[36;1;4mC:\Users\Asus\Downloads\kapil-portfolio_2\kapil-portfolio\components\Cursor.jsx[0m:30:1]
+ [2m30[0m | 
+ [2m31[0m |   useEffect(() => {
+ [2m32[0m |     setTouch(!window.matchMedia("(hover:hover) and (pointer:fine)").matches);
+ [2m33[0m | >>>>>>> master
+    : [31;1m^^^^^^^[0m
+ [2m34[0m |     const move = (e) => {
+ [2m35[0m |       x.set(e.clientX); y.set(e.clientY);
+ [2m35[0m |       setHover(!!e.target.closest?.("a,button,[data-hover]"));
+    `----
+
+  [31mx[0m Merge conflict marker encountered.
+    ,-[[36;1;4mC:\Users\Asus\Downloads\kapil-portfolio_2\kapil-portfolio\components\Cursor.jsx[0m:35:1]
+ [2m35[0m |       x.set(e.clientX); y.set(e.clientY);
+ [2m36[0m |       setHover(!!e.target.closest?.("a,button,[data-hover]"));
+ [2m37[0m |     };
+ [2m38[0m | <<<<<<< HEAD
+    : [31;1m^^^^^^^[0m
+ [2m39[0m |     const d = () => setDown(true), u = () => setDown(false);
+ [2m40[0m |     addEventListener("pointermove", move);
+ [2m40[0m |     addEventListener("pointerdown", d);
+    `----
+
+  [31mx[0m Merge conflict marker encountered.
+    ,-[[36;1;4mC:\Users\Asus\Downloads\kapil-portfolio_2\kapil-portfolio\components\Cursor.jsx[0m:53:1]
+ [2m53[0m |     </>
+ [2m54[0m |   );
+ [2m55[0m | }
+ [2m56[0m | =======
+    : [31;1m^^^^^^^[0m
+ [2m57[0m |     const dn = (e) => {
+ [2m58[0m |       move(e);
+ [2m58[0m |       setDown(true);
+    `----
+
+  [31mx[0m Expected ',', got 'const'
+    ,-[[36;1;4mC:\Users\Asus\Downloads\kapil-portfolio_2\kapil-portfolio\components\Cursor.jsx[0m:53:1]
+ [2m53[0m |         </>
+ [2m54[0m |       );
+ [2m55[0m |     }
+ [2m56[0m | [31;1m,[0m[31;1m-[0m[31;1m>[0m =======
+ [2m57[0m | [31;1m`[0m[31;1m-[0m[31;1m>[0m     const dn = (e) => {
+ [2m58[0m |           move(e);
+ [2m59[0m |           setDown(true);
+ [2m59[0m |           if (e.pointerType !== "mouse") {
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/Cursor.jsx
+./components/Providers.jsx
+
+./lib/data.js
+Error: 
+  [31mx[0m Merge conflict marker encountered.
+    ,-[[36;1;4mC:\Users\Asus\Downloads\kapil-portfolio_2\kapil-portfolio\lib\data.js[0m:38:1]
+ [2m38[0m | export const projects = [
+ [2m39[0m |   { title: "Intern Management System", status: "Featured", featured: true,
+ [2m40[0m |     desc: "A dashboard for managing interns: profiles, task assignment, daily attendance and progress reports, with separate views for admins and interns.",
+ [2m41[0m | <<<<<<< HEAD
+    : [31;1m^^^^^^^[0m
+ [2m42[0m |     stack: ["react", "nodejs", "mongodb", "css"], link: "https://github.com/kapildhimal08" },
+ [2m43[0m | =======
+ [2m43[0m |     stack: ["react", "nodejs", "mongodb", "css"], demo: "intern", link: "https://github.com/kapildhimal08" },
+    `----
+
+  [31mx[0m Merge conflict marker encountered.
+    ,-[[36;1;4mC:\Users\Asus\Downloads\kapil-portfolio_2\kapil-portfolio\lib\data.js[0m:40:1]
+ [2m40[0m |     desc: "A dashboard for managing interns: profiles, task assignment, daily attendance and progress reports, with separate views for admins and interns.",
+ [2m41[0m | <<<<<<< HEAD
+ [2m42[0m |     stack: ["react", "nodejs", "mongodb", "css"], link: "https://github.com/kapildhimal08" },
+ [2m43[0m | =======
+    : [31;1m^^^^^^^[0m
+ [2m44[0m |     stack: ["react", "nodejs", "mongodb", "css"], demo: "intern", link: "https://github.com/kapildhimal08" },
+ [2m45[0m |   { title: "GitHub Portfolio Finder", status: "Finished",
+ [2m45[0m |     desc: "Search any GitHub username and see their profile, top repositories and most-used languages, pulled live from the GitHub API.",
+    `----
+
+  [31mx[0m Expected ',', got ':'
+    ,-[[36;1;4mC:\Users\Asus\Downloads\kapil-portfolio_2\kapil-portfolio\lib\data.js[0m:41:1]
+ [2m41[0m | <<<<<<< HEAD
+ [2m42[0m |     stack: ["react", "nodejs", "mongodb", "css"], link: "https://github.com/kapildhimal08" },
+ [2m43[0m | =======
+ [2m44[0m |     stack: ["react", "nodejs", "mongodb", "css"], demo: "intern", link: "https://github.com/kapildhimal08" },
+    : [31;1m         ^[0m
+ [2m45[0m |   { title: "GitHub Portfolio Finder", status: "Finished",
+ [2m46[0m |     desc: "Search any GitHub username and see their profile, top repositories and most-used languages, pulled live from the GitHub API.",
+ [2m46[0m |     stack: ["javascript", "react", "github", "css"], demo: "finder", link: "https://github.com/kapildhimal08" },
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./lib/data.js
+./components/Skills.jsx
+
+./components/AboutContact.jsx
+Error: 
+  [31mx[0m Expression expected
+    ,-[[36;1;4mC:\Users\Asus\Downloads\kapil-portfolio_2\kapil-portfolio\components\AboutContact.jsx[0m:18:1]
+ [2m18[0m |           {[["Nepal", "Based in Kathmandu"], ["BCA", "Studying computer applications"], ["Open to work", "Internships and entry-level roles"]].map(([b, s], i) => (
+ [2m19[0m |             <motion.li key={b} initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.12 }}>
+ [2m20[0m |               <b>{b}</b><span>{s}</span>
+ [2m21[0m | <<<<<<< HEAD
+    : [31;1m ^^[0m
+ [2m22[0m |             </motion.li>
+ [2m23[0m | =======
+ [2m23[0m |               </motion.li>
+    `----
+
+  [31mx[0m Expression expected
+    ,-[[36;1;4mC:\Users\Asus\Downloads\kapil-portfolio_2\kapil-portfolio\components\AboutContact.jsx[0m:18:1]
+ [2m18[0m |           {[["Nepal", "Based in Kathmandu"], ["BCA", "Studying computer applications"], ["Open to work", "Internships and entry-level roles"]].map(([b, s], i) => (
+ [2m19[0m |             <motion.li key={b} initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.12 }}>
+ [2m20[0m |               <b>{b}</b><span>{s}</span>
+ [2m21[0m | <<<<<<< HEAD
+    : [31;1m    ^^[0m
+ [2m22[0m |             </motion.li>
+ [2m23[0m | =======
+ [2m23[0m |               </motion.li>
+    `----
+
+  [31mx[0m Expression expected
+    ,-[[36;1;4mC:\Users\Asus\Downloads\kapil-portfolio_2\kapil-portfolio\components\AboutContact.jsx[0m:19:1]
+ [2m19[0m |             <motion.li key={b} initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.12 }}>
+ [2m20[0m |               <b>{b}</b><span>{s}</span>
+ [2m21[0m | <<<<<<< HEAD
+ [2m22[0m |             </motion.li>
+    : [31;1m            ^[0m
+ [2m23[0m | =======
+ [2m24[0m |               </motion.li>
+ [2m24[0m | >>>>>>> master
+    `----
+
+  [31mx[0m Unterminated regexp literal
+    ,-[[36;1;4mC:\Users\Asus\Downloads\kapil-portfolio_2\kapil-portfolio\components\AboutContact.jsx[0m:19:1]
+ [2m19[0m |             <motion.li key={b} initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.12 }}>
+ [2m20[0m |               <b>{b}</b><span>{s}</span>
+ [2m21[0m | <<<<<<< HEAD
+ [2m22[0m |             </motion.li>
+    : [31;1m             ^^^^^^^^^^^[0m
+ [2m23[0m | =======
+ [2m24[0m |               </motion.li>
+ [2m24[0m | >>>>>>> master
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/AboutContact.jsx
+./app/page.js
+
+./components/Projects.jsx
+Error: 
+  [31mx[0m Merge conflict marker encountered.
+   ,-[[36;1;4mC:\Users\Asus\Downloads\kapil-portfolio_2\kapil-portfolio\components\Projects.jsx[0m:1:1]
+ [2m1[0m | "use client";
+ [2m2[0m | <<<<<<< HEAD
+   : [31;1m^^^^^^^[0m
+ [2m3[0m | import { motion, useMotionValue, useSpring, useTransform, useMotionTemplate } from "framer-motion";
+ [2m4[0m | import { projects, tech } from "../lib/data";
+ [2m4[0m | 
+   `----
+
+  [31mx[0m Merge conflict marker encountered.
+   ,-[[36;1;4mC:\Users\Asus\Downloads\kapil-portfolio_2\kapil-portfolio\components\Projects.jsx[0m:4:1]
+ [2m4[0m | import { projects, tech } from "../lib/data";
+ [2m5[0m | 
+ [2m6[0m | function Card({ p, i }) {
+ [2m7[0m | =======
+   : [31;1m^^^^^^^[0m
+ [2m8[0m | import { useEffect, useState } from "react";
+ [2m9[0m | import { motion, AnimatePresence, useMotionValue, useSpring, useTransform, useMotionTemplate } from "framer-motion";
+ [2m9[0m | import { projects, tech } from "../lib/data";
+   `----
+
+  [31mx[0m 'import', and 'export' cannot be used outside of module code
+    ,-[[36;1;4mC:\Users\Asus\Downloads\kapil-portfolio_2\kapil-portfolio\components\Projects.jsx[0m:4:1]
+ [2m 4[0m |     import { projects, tech } from "../lib/data";
+ [2m 5[0m |     
+ [2m 6[0m |     function Card({ p, i }) {
+ [2m 7[0m | [31;1m,[0m[31;1m-[0m[31;1m>[0m =======
+ [2m 8[0m | [31;1m`[0m[31;1m-[0m[31;1m>[0m import { useEffect, useState } from "react";
+ [2m 9[0m |     import { motion, AnimatePresence, useMotionValue, useSpring, useTransform, useMotionTemplate } from "framer-motion";
+ [2m10[0m |     import { projects, tech } from "../lib/data";
+ [2m10[0m |     import GithubFinder from "./GithubFinder";
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/Projects.jsx
+./app/page.js
+
+
+> Build failed because of webpack errors

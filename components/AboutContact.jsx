@@ -18,11 +18,7 @@ export function About() {
           {[["Nepal", "Based in Kathmandu"], ["BCA", "Studying computer applications"], ["Open to work", "Internships and entry-level roles"]].map(([b, s], i) => (
             <motion.li key={b} initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.12 }}>
               <b>{b}</b><span>{s}</span>
-<<<<<<< HEAD
             </motion.li>
-=======
-              </motion.li>
->>>>>>> master
           ))}
         </ul>
       </div>
