@@ -11,13 +11,11 @@ button{font:inherit;cursor:pointer}
 
 /* cursor */
 .cur-dot,.cur-ring{position:fixed;top:0;left:0;z-index:100;pointer-events:none;border-radius:50%}
-<<<<<<< HEAD
+
 .cur-dot{width:8px;height:8px;margin:-4px 0 0 -4px;background:var(--accent)}
 .cur-ring{width:42px;height:42px;margin:-21px 0 0 -21px;border:1.5px solid var(--accent)}
-=======
 .cur-dot{width:6px;height:6px;margin:-3px 0 0 -3px;background:var(--accent)}
 .cur-ring{width:24px;height:24px;margin:-12px 0 0 -12px;border:1.5px solid var(--accent)}
->>>>>>> master
 
 /* nav */
 .nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(13,19,48,.78);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
@@ -31,19 +29,22 @@ button{font:inherit;cursor:pointer}
 
 /* hero */
 .hero{position:relative;min-height:calc(100svh - 64px);display:flex;align-items:center;overflow:hidden}
-<<<<<<< HEAD
 .hero3d{position:absolute;top:0;bottom:0;right:0;width:62%;z-index:0}
 @media(max-width:820px){.hero3d{width:100%;opacity:.45}}
 .hero-inner{position:relative;z-index:1;padding-top:40px;padding-bottom:60px}
 .eyebrow{color:var(--muted);font-weight:600;margin:0 0 16px}
 .hero h1{font-size:clamp(52px,11vw,138px);font-weight:800;letter-spacing:-.04em}
-=======
 .hero3d{position:absolute;top:0;bottom:0;right:0;width:46%;z-index:0}
 @media(max-width:820px){.hero3d{width:100%;opacity:.45}}
 .hero-inner{position:relative;z-index:1;padding-top:40px;padding-bottom:60px}
 .eyebrow{color:var(--muted);font-weight:600;margin:0 0 16px}
 .hero h1{font-size:clamp(52px,9vw,112px);font-weight:800;letter-spacing:-.04em}
->>>>>>> master
+
+.hero3d{position:absolute;top:0;bottom:0;right:0;width:46%;z-index:0}
+@media(max-width:820px){.hero3d{width:100%;opacity:.45}}
+.hero-inner{position:relative;z-index:1;padding-top:40px;padding-bottom:60px}
+.eyebrow{color:var(--muted);font-weight:600;margin:0 0 16px}
+.hero h1{font-size:clamp(52px,9vw,112px);font-weight:800;letter-spacing:-.04em}
 .word{display:inline-block;white-space:nowrap;margin-right:.22em}
 .mask{display:inline-block;overflow:hidden;padding-bottom:.08em;vertical-align:top}
 .mask>span{display:inline-block}
@@ -100,8 +101,6 @@ section.sec{padding:clamp(70px,10vw,120px) 0 0}
 .footer{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;padding-top:40px;padding-bottom:48px;color:var(--muted);font-size:15px}
 .footer a{text-decoration:none;margin-left:16px}
 @media(prefers-reduced-motion:reduce){.track{animation:none}html{scroll-behavior:auto}}
-<<<<<<< HEAD
-=======
 
 /* live demos */
 @media (hover:hover) and (pointer:fine){input{cursor:none}}
@@ -140,4 +139,3 @@ section.sec{padding:clamp(70px,10vw,120px) 0 0}
 
 /* tap ripple (touch screens) */
 .cur-ripple{position:fixed;z-index:100;pointer-events:none;width:24px;height:24px;margin:-12px 0 0 -12px;border-radius:50%;border:2px solid var(--accent)}
->>>>>>> master
