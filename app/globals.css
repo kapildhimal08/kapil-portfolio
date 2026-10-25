@@ -101,8 +101,6 @@ section.sec{padding:clamp(70px,10vw,120px) 0 0}
 .footer{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;padding-top:40px;padding-bottom:48px;color:var(--muted);font-size:15px}
 .footer a{text-decoration:none;margin-left:16px}
 @media(prefers-reduced-motion:reduce){.track{animation:none}html{scroll-behavior:auto}}
-
-/* live demos */
 @media (hover:hover) and (pointer:fine){input{cursor:none}}
 .actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:6px}
 .actions .btn{padding:10px 20px;cursor:pointer}
